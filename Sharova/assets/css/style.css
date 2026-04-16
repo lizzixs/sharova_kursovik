@@ -29,7 +29,7 @@ main {
     width: 100%;
 }
 
-/* Только самый лёгкий намёк на японскую эстетику */
+
 .jp-accent {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
@@ -280,7 +280,7 @@ nav a:hover {
     letter-spacing: 4px;
 }
 
-/* ========= КАТАЛОГ — РАСШИРЕННЫЕ ХАРАКТЕРИСТИКИ ========= */
+/*  КАТАЛОГ  */
 .car-scroll {
     display: flex;
     gap: 24px;
@@ -700,7 +700,7 @@ td {
     to { opacity: 1; }
 }
 
-/* ---------- БУРГЕР-МЕНЮ ---------- */
+/* БУРГЕР-МЕНЮ  */
 .burger-menu {
     display: none;
     flex-direction: column;
@@ -796,7 +796,7 @@ td {
     }
 }
 
-/* Для самых маленьких экранов */
+
 @media (max-width: 480px) {
     .user-greeting {
         display: none;
