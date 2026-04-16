@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $check->bind_param("si", $email, $user_id);
     $check->execute();
     if ($check->get_result()->num_rows > 0) {
-        // Ошибка (в production нужно передать в сессию)
         header('Location: profile.php?error=email_exists');
         exit;
     }
