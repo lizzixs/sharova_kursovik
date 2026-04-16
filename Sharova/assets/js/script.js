@@ -1,4 +1,4 @@
-// ========== БУРГЕР-МЕНЮ БЕЗ ЗАТЕМНЕНИЯ ==========
+//  БУРГЕР-МЕНЮ 
 const burger = document.getElementById('burgerMenu');
 const nav = document.getElementById('mainNav');
 
@@ -33,7 +33,7 @@ if (burger && nav) {
         }
     });
 
-    // Обработка кликов по ссылкам в меню (якоря)
+    // Обработка кликов по ссылкам в меню 
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -69,13 +69,13 @@ if (burger && nav) {
     });
 }
 
-// ========== МОДАЛЬНОЕ ОКНО ДЛЯ УСЛУГ ==========
+// МОДАЛЬНОЕ ОКНО ДЛЯ УСЛУГ 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('serviceModal');
     const modalBody = document.getElementById('modal-body');
     const closeBtn = modal ? modal.querySelector('.close-modal') : null;
 
-    // Данные об услугах (можно дополнить или загружать с сервера)
+    // Данные об услугах 
     const serviceData = {
         auction: {
             title: 'Доступ к закрытым аукционам',
