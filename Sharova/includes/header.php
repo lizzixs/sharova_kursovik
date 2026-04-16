@@ -12,7 +12,7 @@ require_once __DIR__ . '/../config/database.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Стили слайдера (перенесены из index.php для валидности) -->
+    <!-- Стили слайдера  -->
     <style>
         .hero-slider {
             position: relative;
@@ -131,7 +131,7 @@ require_once __DIR__ . '/../config/database.php';
                 <img src="images/logo.png" alt="Shift & Drift" style="height: 70px;">
             </a>
             
-            <!-- Кнопка бургер-меню (видна только на мобильных) -->
+            <!-- Кнопка бургер-меню -->
             <button class="burger-menu" id="burgerMenu" aria-label="Меню">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
