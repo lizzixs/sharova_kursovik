@@ -9,7 +9,7 @@ if (!Session::isLoggedIn()) {
 
 $car_id = isset($_GET['car_id']) ? intval($_GET['car_id']) : 0;
 $action = $_GET['action'] ?? 'add';
-$return = $_GET['return'] ?? 'car'; // по умолчанию возвращаем на карточку авто
+$return = $_GET['return'] ?? 'car'; 
 
 if ($car_id <= 0) {
     header('Location: catalog.php');
@@ -19,7 +19,7 @@ if ($car_id <= 0) {
 $db = Database::getInstance()->getConnection();
 $user_id = Session::getUserId();
 
-// Проверим существование авто
+// Проверка существования авто
 $check = $db->prepare("SELECT id FROM cars WHERE id = ?");
 $check->bind_param("i", $car_id);
 $check->execute();
@@ -38,7 +38,6 @@ if ($action == 'add') {
     $stmt->execute();
 }
 
-// Определяем, куда перенаправлять
 if ($return === 'profile') {
     header('Location: profile.php#favorites');
 } else {
