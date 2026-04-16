@@ -1,5 +1,5 @@
 <?php
-// Включаем отображение ошибок (можно оставить для диагностики)
+// Включаем отображение ошибок 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -29,12 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         $client_name = !empty($user['full_name']) ? $user['full_name'] : $user['username'];
         
-        // ВАЖНО: is_approved = FALSE – отзыв требует модерации
         $stmt = $db->prepare("INSERT INTO reviews (client_name, car_id, rating, text, is_approved) VALUES (?, ?, ?, ?, FALSE)");
         $stmt->bind_param("siis", $client_name, $car_id, $rating, $text);
         $stmt->execute();
         
-        // Редирект обратно на страницу автомобиля с уведомлением о том, что отзыв на модерации
+        // Редирект обратно на страницу автомобиля с уведомлением 
         header('Location: car.php?id=' . $car_id . '&review_pending=1');
         exit;
     }
