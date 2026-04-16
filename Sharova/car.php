@@ -1,5 +1,5 @@
 <?php
-// Включаем отображение ошибок (для диагностики, можно оставить)
+// Включаем отображение ошибок 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -31,7 +31,7 @@ $car = $result->fetch_assoc();
 
 $is_favorite = false;
 if (Session::isLoggedIn()) {
-    $userId = Session::getUserId();   // <-- Исправление Notice: переменная вместо прямого вызова
+    $userId = Session::getUserId();   
     $favStmt = $db->prepare("SELECT id FROM favorites WHERE user_id = ? AND car_id = ?");
     $favStmt->bind_param("ii", $userId, $id);
     $favStmt->execute();
