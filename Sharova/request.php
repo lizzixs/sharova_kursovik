@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = trim($_POST['name'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     $email = trim($_POST['email'] ?? '');
-    // Исправление: передаём NULL, если автомобиль не выбран
+    //  передаём NULL, если автомобиль не выбран
     $car_id_post = isset($_POST['car_id']) && $_POST['car_id'] > 0 ? intval($_POST['car_id']) : null;
     $request_type = $_POST['request_type'] ?? 'callback';
     $message = trim($_POST['message'] ?? '');
